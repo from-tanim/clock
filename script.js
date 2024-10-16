@@ -37,6 +37,17 @@ function updateTimerDisplay(time) {
     document.getElementById('timer').innerText = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+
 document.getElementById('start').addEventListener('click', startTimer);
 document.getElementById('stop').addEventListener('click', stopTimer);
 document.getElementById('reset').addEventListener('click', resetTimer);
+document.getElementById('fullscreen').addEventListener('click', toggleFullscreen);
