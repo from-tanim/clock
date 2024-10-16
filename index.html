@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -27,6 +28,8 @@
         <input type="text" id="expenseDetails" placeholder="Details">
         <input type="number" id="expenseAmount" placeholder="Amount">
         <button onclick="addExpense()">Add Expense</button>
+
+        <button id="generatePdf" onclick="generatePDF()">Generate PDF</button>
 
         <h2>Summary</h2>
         <div id="summary">
