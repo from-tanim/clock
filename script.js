@@ -32,7 +32,7 @@ $(document).ready(function () {
         // Send data to the backend
         $.ajax({
             type: 'POST',
-            url: 'http://localhost:5000/api/qrcode',
+            url: 'save.php', // URL of the PHP script
             data: {
                 idNo: idNo,
                 name: name,
@@ -42,7 +42,8 @@ $(document).ready(function () {
                 bloodGroup: bloodGroup
             },
             success: function (response) {
-                console.log(response.message);
+                const jsonResponse = JSON.parse(response);
+                console.log(jsonResponse.message);
             },
             error: function (error) {
                 console.error('Error saving data:', error);
