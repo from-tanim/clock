@@ -1,62 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Details - Nabila Hossain Tanny</title>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2><p style="color:green" align="center">BIO DATA OF TANNY</p></h2>
-<hr>
-    <h1>Forename: Nabila Hossain Tanny</h1>
+    <div class="container">
+        <h1>Expense Tracker</h1>
 
-    <h2>Contact Information</h2>
-    <ul>
-        <li><strong>Present Address:</strong> House No-26, Block-[B], Sugonda R/A, Panchlaish, Chattogram</li>
-        <li><strong>Permanent Address:</strong> Khonakhali, Chakoria, Cox’s Bazar</li>
-    </ul>
+        <h2>Add Income</h2>
+        <input type="text" id="incomeSource" placeholder="Source">
+        <input type="number" id="incomeAmount" placeholder="Amount">
+        <button onclick="addIncome()">Add Income</button>
 
-    <h2>Personal Information</h2>
-    <ul>
-        <li><strong>Date of Birth:</strong> 16th March, 1999</li>
-        <li><strong>Height:</strong> 5'2"</li>
-        <li><strong>Blood Group:</strong> B(+ve)</li>
-    </ul>
+        <h2>Add Expense</h2>
+        <select id="expenseCategory">
+            <option value="Food">Food</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Books">Books</option>
+            <option value="Transport">Transport</option>
+            <option value="Fees">Fees</option>
+            <option value="Others">Others</option>
+        </select>
+        <input type="text" id="expenseDetails" placeholder="Details">
+        <input type="number" id="expenseAmount" placeholder="Amount">
+        <button onclick="addExpense()">Add Expense</button>
 
-    <h2>Family Details</h2>
-    <ul>
-        <li><strong>Father’s Name:</strong> Late Mohammad Hossain</li>
-        <li><strong>Mother’s Name:</strong> Aziza Khanam</li>
-        <li><strong>Mother’s Occupation:</strong> Accountant at Azam Securities Ltd, Chakoria</li>
-        <li><strong>Phone:</strong>
-        <a href="tell:+8801819-077824">+8801819-077824</a>
-        </li>
-        <li><strong>Sibling’s Status:</strong> Tanim Hossain - [HSC-25]</li>
-    </ul>
+        <h2>Summary</h2>
+        <div id="summary">
+            <p>Total Income: <span id="totalIncome">0</span></p>
+            <p>Total Expenses: <span id="totalExpenses">0</span></p>
+            <p>Balance: <span id="balance">0</span></p>
+        </div>
 
-    <h2>Educational Qualifications</h2>
-    <ul>
-        <li>Undergrad in Statistics from Chittagong College - [2024]</li>
-        <li>Completed H.S.C under Nasirabad Govt. Women College - [2017]</li>
-        <li>Completed S.S.C from Kishaloya Adarsha Girl’s High School - [2015]</li>
-    </ul>
+        <h2>Income List</h2>
+        <ul id="incomeList"></ul>
 
-    <h2>References</h2>
-    <ul>
-        <li>
-            <strong>LN Belal Uddin Chowdhury [Maternal Uncle]</strong><br>
-           # Director of Mahir Trading<br>
-            Cabinet Secretary at Lions International [315-B4, Bangladesh]<br>
-          <a href="tell:+8801753-444447">+8801753-444447</a>
-        </li>
-        <hr>
-        <li>
-            <strong>Mohammad Yousuf [Uncle]</strong><br>
-            #Assistant Teacher at Krishnakumary City Corp. Girls High School
-          <br>  <a href="tell:+8801819-336427">+8801819-336427</a>
-        </li>
-    </ul>
+        <h2>Expense List</h2>
+        <ul id="expenseList"></ul>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
