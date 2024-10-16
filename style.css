@@ -14,12 +14,16 @@ body {
 }
 
 #timer {
-    font-size: 5em;
+    font-size: 10em; /* Increased size for better visibility */
     margin: 20px 0;
 }
 
+.controls {
+    margin-top: 20px;
+}
+
 input {
-    width: 60px;
+    width: 80px;
     margin: 5px;
     padding: 10px;
     font-size: 1em;
