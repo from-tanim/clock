@@ -28,5 +28,25 @@ $(document).ready(function () {
             downloadLink.click();
             document.body.removeChild(downloadLink);
         });
+
+        // Send data to the backend
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:5000/api/qrcode',
+            data: {
+                idNo: idNo,
+                name: name,
+                fatherName: fatherName,
+                motherName: motherName,
+                dob: dob,
+                bloodGroup: bloodGroup
+            },
+            success: function (response) {
+                console.log(response.message);
+            },
+            error: function (error) {
+                console.error('Error saving data:', error);
+            }
+        });
     });
 });
